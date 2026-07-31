@@ -6,7 +6,7 @@
 /*   By: fnguegan <fnguegan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/29 16:00:24 by fnguegan          #+#    #+#             */
-/*   Updated: 2026/07/31 15:42:38 by fnguegan         ###   ########.fr       */
+/*   Updated: 2026/07/31 21:21:46 by fnguegan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,16 +107,16 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-// int main(void)
-// {
-// 	int fd = open("test.txt", O_RDONLY);
-// 	char *line;
+int main(void)
+{
+	int fd = open("test.txt", O_RDONLY);
+	char *line;
 
-// 	while ((line = get_next_line(fd)))
-// 	{
-// 		printf("%s", line);
-// 		free(line);
-// 	}
-// 	close(fd);
-// 	return (0);
-// }
+	while ((line = get_next_line(fd)))
+	{
+		printf("%s", line);
+		free(line);
+	}
+	close(fd);
+	return (0);
+}
